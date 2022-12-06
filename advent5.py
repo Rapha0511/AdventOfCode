@@ -29,7 +29,7 @@ for line in lines:
     line = line.strip().replace("move","").replace("from",",").replace('to',',') #on remplace les trucs qui servent a rien part de ','
     move, From , to = map(int, line.split(",")) # 1 element = move , 2m From, 3m to
     trucAjouter = array[From - 1][:move] # on recupere la patie du tableau a ajouter , ici les 3 premiers elements du  tableau qui nous interesse 
-    trucAjouter.reverse() # on le reverse pour simuler un ajout d'element 1 par 1
+    #trucAjouter.reverse() # on le reverse pour simuler un ajout d'element 1 par 1
     array[to - 1] = trucAjouter + array[to - 1] # on ajoute a la les trucaajouter au début du tableau destinataire
     del array[From - 1][0:move] # et on supprime les trucaajouter du tableau emetteur
 
